@@ -13,5 +13,12 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentUser = this.token.getUser();
+    this.idtutor();
+  }
+
+  idtutor(): void {
+    const iddd=this.currentUser.id;
+    console.log(iddd);
+    // this.pppService.
   }
 }

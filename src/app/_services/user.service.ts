@@ -15,7 +15,7 @@ export class UserService {
   }
 
   getUserBoard(): Observable<any> {
-    return this.http.get(API_URL + 'user/formatos', { responseType: 'text' });
+    return this.http.get(API_URL + 'user', { responseType: 'text' });
   }
 
   getModeratorBoard(): Observable<any> {
@@ -26,6 +26,10 @@ export class UserService {
     return this.http.get(API_URL + 'admin', { responseType: 'text' });
     
 
+  }
+
+  findByIddd(id: any): Observable<any> {
+    return this.http.get<any>(`http://localhost:9090/api/usuarios/yyy/idd`);
   }
 
 

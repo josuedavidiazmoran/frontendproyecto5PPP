@@ -8,6 +8,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { TutorialDetailsComponent } from './tutorial-details/tutorial-details.component';
+import { PPPComponent } from './PPP/PPP.component';
+import { EvaluacionComponent } from './Evaluacion/evaluacion.component';
+
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,6 +22,10 @@ const routes: Routes = [
   { path: 'user', component: BoardUserComponent },
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
+  { path: 'tutorials/:id', component: TutorialDetailsComponent },
+  { path: 'ppps', component: PPPComponent },
+  { path: 'ppp/:id', component: EvaluacionComponent },
+  
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
