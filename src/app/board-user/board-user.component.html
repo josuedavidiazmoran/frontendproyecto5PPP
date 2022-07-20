@@ -1,0 +1,69 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by title"
+        [(ngModel)]="title"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="searchTitle()"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h4>Tutorials List</h4>
+    <!-- <ul class="list-group"> -->
+    <div class="container">
+      <!-- <li
+        class="list-group-item"
+        *ngFor="let tutorial of tutorials; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveTutorial(tutorial, i)"
+      >
+        {{ tutorial.title }}
+        {{ tutorial.title }}
+      </li> -->
+      <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Requisitos</th>
+                <th>Descripción</th>
+                <th>Opciones</th>
+                <th>Comentario</th>
+                <th>Indicador</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tuto of tutorials;let indice=index">
+              <td> {{indice+1}} 
+                <td>{{tuto.title}}</td>
+                <td>{{tuto.description}}</td>
+                <td type="button"><i class="bi bi-cloud" style="font-size: 1em;"></i></td>
+                <td></td>
+                <td><i class="bi bi-check-all" style="font-size: 1.5em;"></i></td>
+                
+            </tr> 
+        </tbody>
+    </table>
+
+    </div>
+    <!-- </ul> -->
+
+    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
+      Remove All
+    </button>
+  </div>
+</div>
