@@ -42,7 +42,12 @@
     </form>
 
     <div class="alert alert-success" *ngIf="isLoggedIn">
-      Logged in as {{ roles }}.
+      Logged in as :
+      <ul>
+        <li> {{ roles[0] }} </li>
+        <li> {{ roles[1] }} </li>
+        <li> {{ roles[2] }} </li>
+      </ul>
     </div>
   </div>
 </div>

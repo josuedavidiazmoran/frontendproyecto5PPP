@@ -1,0 +1,14 @@
+.todo {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cuerpo {
+    display: flex;
+    flex-direction: column;
+}
+.user {
+    display: flex;
+    justify-content: center;
+}
