@@ -16,7 +16,7 @@ import { EvaluacionPraComponent } from './EvaluacionPra/evaluacionPra.component'
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  // { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
@@ -31,7 +31,7 @@ const routes: Routes = [
   
   { path: 'pppPra/:id', component: EvaluacionPraComponent },
   
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
 
 @NgModule({
