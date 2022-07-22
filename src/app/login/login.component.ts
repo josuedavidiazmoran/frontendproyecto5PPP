@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
         this.reloadPage();
-        window.location.href = '/user';
+        window.location.href = '/dashboard';
         console.log(" ver respuesta ",data);
         this.isLoginFailed = false;
         this.isLoggedIn = true;

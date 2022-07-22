@@ -13,6 +13,7 @@ import { PPPComponent } from './PPP/PPP.component';
 import { PPPPraComponent } from './PPPPra/PPPPra.component';
 import { EvaluacionComponent } from './Evaluacion/evaluacion.component';
 import { EvaluacionPraComponent } from './EvaluacionPra/evaluacionPra.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
   
   { path: 'pppPra/:id', component: EvaluacionPraComponent },
   
-  { path: '', redirectTo: 'login', pathMatch: 'full' }
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent}
 ];
 
 @NgModule({

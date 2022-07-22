@@ -28,6 +28,8 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { EvaluacionPraComponent } from './EvaluacionPra/evaluacionPra.component';
 import { environment } from 'src/environments/environment';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NbThemeModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     PPPPraComponent,
     EvaluacionComponent,
     EvaluacionPraComponent,
+    DashboardComponent,
  
   ],
   imports: [
@@ -54,6 +57,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AngularFireStorageModule,
     NgbModule,
     ReactiveFormsModule,
+    NbThemeModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebaseConfig),
    
   ],

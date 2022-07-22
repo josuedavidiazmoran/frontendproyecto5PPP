@@ -32,7 +32,7 @@ export class BoardUserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.retrieveTutorials();
+    this.retrieveTutorials(); 
   }
   retrieveTutorials(): void {
     this.tutorialService.getAll()
