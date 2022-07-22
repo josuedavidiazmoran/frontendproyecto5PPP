@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Tutorial } from '../_models/tutorial.model';
 import { TutorialesService } from '../_services/tutoriales.service';
 
+
 @Component({
   selector: 'app-tutorial-details',
   templateUrl: './tutorial-details.component.html',

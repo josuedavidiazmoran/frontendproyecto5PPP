@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,FormControl,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,7 +27,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 // import { firebaseConfig } from 'src/environments/environment';
 import { EvaluacionPraComponent } from './EvaluacionPra/evaluacionPra.component';
 import { environment } from 'src/environments/environment';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,8 @@ import { environment } from 'src/environments/environment';
     PPPComponent,
     PPPPraComponent,
     EvaluacionComponent,
-    EvaluacionPraComponent
+    EvaluacionPraComponent,
+ 
   ],
   imports: [
     BrowserModule,
@@ -51,7 +52,10 @@ import { environment } from 'src/environments/environment';
     FormsModule,
     HttpClientModule,
     AngularFireStorageModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    NgbModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+   
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

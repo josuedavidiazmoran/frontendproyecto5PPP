@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Tutorial } from '../_models/tutorial.model';
 import { TutorialesService } from '../_services/tutoriales.service';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-board-user',
@@ -17,8 +18,18 @@ export class BoardUserComponent implements OnInit {
   title = '';
 
 
-  constructor(private tutorialService: TutorialesService) { }
-
+  constructor(private tutorialService: TutorialesService,private modalService: NgbModal) { 
+     
+  }
+  
+  open() {
+    this.modalService.open('nuevo').result.then((result) => {
+    //   this.closeResult = `Closed with: ${result}`;
+    // }, (reason) => {
+    //   this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    console.log(result)
+    });
+  }
 
   ngOnInit(): void {
     this.retrieveTutorials();
